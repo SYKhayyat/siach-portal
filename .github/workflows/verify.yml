@@ -1,0 +1,14 @@
+name: Verify portal
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check portal files
+        run: test -f index.html && test -f styles.css

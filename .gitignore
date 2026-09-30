@@ -1,1 +1,2 @@
-.netlify/
+# Local deployment state
+.wrangler
